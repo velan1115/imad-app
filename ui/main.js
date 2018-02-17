@@ -5,7 +5,7 @@ alert("welcome to IMAD");
 
 //changing main text
 var t = document.getElementById("text");
-t.innerHTML = "Welcome MK!!!";
+// t.innerHTML = "Welcome MK!!!";
 
 //image moving
 //var image = document.getElementById("madi");
