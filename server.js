@@ -5,6 +5,60 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var article1 = {
+    title:'Article-one',
+    heading:'Introduction',
+    data:'17/02/2017',
+    content:
+    ` <div>
+           <p>hai this is my first article 1 html file</p>
+       </div>
+       <div>
+            <p>hai this is my first article 1 html file,hai this is my first article 1 html file</p>
+            
+             <p>hai this is my first article 1 html file--hai this is my first article 1 html file</p>
+             
+              <p>hai this is my first article 1 html file</p>
+       </div>`
+};
+
+
+function createpage(data)
+{
+   var title=data.title;
+   var heading=data.heading;
+   var date=data.date;
+   var content=data.content;
+    
+    var htmltemplate=
+   ` <!DOCTYPE html>
+    <head>
+        ${title}
+        <meta name="viewport" content="width=device-width , initial-sacle=1"/>
+         <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+       <a href='/'>HOME</a>
+       
+       <hr/>
+       
+       <div>
+          ${heading}
+       </div>
+       <div>
+          ${date}
+       </div>
+       <div>
+            ${content}
+       </div>
+       </div>
+    </body>
+    
+</html>
+`;
+    
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
