@@ -102,8 +102,9 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/article1',function(req,res){
-    res.send(createpage(article1));
+app.get('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
+    res.send(createpage(articles[articleName]));
 });
 app.get('/article2',function(req,res){
     res.send(createpage(article2));
