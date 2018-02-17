@@ -16,7 +16,10 @@ t.innerHTML = "Welcome MK!!!";
 
 //continuous image moving
 var image = document.getElementById("madi");
-image.onclick= setInterval(moveimg,50);
+image.onclick= function()
+{
+    var interval = setInterval(moveimg,50);
+}
  
  
 //function definition
