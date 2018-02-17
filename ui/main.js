@@ -1,10 +1,10 @@
 console.log('Loaded!');
 
 //alert
-alert("welcome to IMAD");
+//alert("welcome to IMAD");
 
 //changing main text
-var t = document.getElementById("text");
+//var t = document.getElementById("text");
 // t.innerHTML = "Welcome MK!!!";
 
 //image moving
@@ -29,3 +29,10 @@ var t = document.getElementById("text");
 //     marginmove = marginmove + 5;
 //     image.style.marginLeft = marginmove +'px';
 // }
+
+var counter = 0;
+var b = document.getElementById("b");
+b.onclick = function(){
+    counter = counter +1;
+    span.innerHTML = counter.toString();
+}
