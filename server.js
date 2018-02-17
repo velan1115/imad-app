@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var article1 = {
+var articles = {
+   article1 :{
     title:'Article-one',
     heading:'Introduction',
     date:'17/02/2017',
@@ -20,7 +21,41 @@ var article1 = {
              
               <p>hai this is my first article 1 html file</p>
        </div>`
+},
+    article2 : {
+    title:'Article-two',
+    heading:'Introduction',
+    date:'17/02/2017',
+    content:
+    ` <div>
+           <p>hai this is my first article 2 html file</p>
+       </div>
+       <div>
+            <p>hai this is my first article 2 html file,hai this is my first article 2 html file</p>
+            
+             <p>hai this is my first article 2 html file--hai this is my first article 2 html file</p>
+             
+              <p>hai this is my first article 2 html file</p>
+       </div>`},
+    article3 : {
+        title:'Article-three',
+    heading:'Introduction',
+    date:'17/02/2017',
+    content:
+    ` <div>
+           <p>hai this is my first article 3 html file</p>
+       </div>
+       <div>
+            <p>hai this is my first article 3 html file,hai this is my first article 3 html file</p>
+            
+             <p>hai this is my first article 3 html file--hai this is my first article 3 html file</p>
+             
+              <p>hai this is my first article 3 html file</p>
+       </div>`
+    }
 };
+
+
 
 
 function createpage(data)
@@ -71,10 +106,10 @@ app.get('/article1',function(req,res){
     res.send(createpage(article1));
 });
 app.get('/article2',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article2.html'));
+    res.send(createpage(article2));
 });
 app.get('/article3',function(req,res){
-      res.sendFile(path.join(__dirname, 'ui', 'article3.html'));
+      res.send(createpage(article3));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
