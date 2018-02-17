@@ -8,15 +8,19 @@ var t = document.getElementById("text");
 t.innerHTML = "Welcome MK!!!";
 
 //image moving
+//var image = document.getElementById("madi");
 // image.onclick = function(){
 //     image.style.marginLeft = "200px";
-};
+
+
+
 //continuous image moving
 var image = document.getElementById("madi");
- image.onclick= image.setInterval(moveimg,50);
+image.onclick= image.setInterval(moveimg,50);
+ 
  
 //function definition
-marginmove = 0;
+var marginmove = 0;
 function moveimg()
 {
     marginmove = marginmove + 5;
