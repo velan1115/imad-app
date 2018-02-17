@@ -16,7 +16,7 @@ t.innerHTML = "Welcome MK!!!";
 
 //continuous image moving
 var image = document.getElementById("madi");
-image.onclick= image.setInterval(moveimg,50);
+image.onclick= setInterval(moveimg,50);
  
  
 //function definition
@@ -24,5 +24,5 @@ var marginmove = 0;
 function moveimg()
 {
     marginmove = marginmove + 5;
-    image.style.marginLeft = marginmove + 'px';
+    image.style.marginLeft = marginmove +'px';
 }
