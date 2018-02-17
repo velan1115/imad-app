@@ -32,7 +32,8 @@ console.log('Loaded!');
 
 var counter = 0;
 var b = document.getElementById("b");
+var s = document.getElementById("s");
 b.onclick = function(){
-    counter = counter +1;
-    span.innerHTML = counter.toString();
+    counter = counter + 1;
+    s.innerHTML = counter.toString();
 }
