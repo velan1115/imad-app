@@ -15,17 +15,17 @@ t.innerHTML = "Welcome MK!!!";
 
 
 //continuous image moving
-var image = document.getElementById("madi");
-image.onclick= function()
-{
-    var interval = setInterval(moveimg,50);
-}
+// var image = document.getElementById("madi");
+// image.onclick= function()
+// {
+//     var interval = setInterval(moveimg,50);
+// }
  
  
-//function definition
-var marginmove = 0;
-function moveimg()
-{
-    marginmove = marginmove + 5;
-    image.style.marginLeft = marginmove +'px';
-}
+// //function definition
+// var marginmove = 0;
+// function moveimg()
+// {
+//     marginmove = marginmove + 5;
+//     image.style.marginLeft = marginmove +'px';
+// }
