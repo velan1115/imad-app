@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var article1 = {
     title:'Article-one',
     heading:'Introduction',
-    data:'17/02/2017',
+    date:'17/02/2017',
     content:
     ` <div>
            <p>hai this is my first article 1 html file</p>
