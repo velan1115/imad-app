@@ -9,6 +9,16 @@ t.innerHTML = "Welcome MK!!!";
 
 //image moving
 var image = document.getElementById("madi");
-image.onclick = function(){
-    image.style.marginLeft = "200px";
+// image.onclick = function(){
+//     image.style.marginLeft = "200px";
 };
+//continuous image moving
+ image.onclick= image.setInterval(moveimg,50);
+ 
+//function definition
+marginmove = 0;
+function moveimg()
+{
+    marginmove = marginmove + 5;
+    image.style.marginLeft = marginmove + 'px';
+}
