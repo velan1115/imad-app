@@ -43,11 +43,14 @@ b.onclick = function(){
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
-    if (request.readyState ==  XMLHttpRequest.DONE && request.status === 200) {
-       // Typical action to be performed when the document is ready:
-      var  counter =request.responseText;
-      var s = document.getElementById("s");
-      s.innerHTML = counter.toString();
+    if (request.readyState ==  XMLHttpRequest.DONE) {
+        if( request.status === 200)
+        {
+              // Typical action to be performed when the document is ready:
+              var  counter =request.responseText;
+              var s = document.getElementById("s");
+              s.innerHTML = counter.toString(); 
+        }
     }
 };
 };
