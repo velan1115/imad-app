@@ -57,6 +57,18 @@ request.open('GET','http://muthukannanksv.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 
+var submit = document.getElementById("sub");
+var ol = document.getElementById("list");
+submit.onclick = function(){
+  var list ='';
+  var names = ['mk','kan','vis','raja'];
+  for(var i=0;i<names.length;i++)
+  {
+      list+='<li>'+names[i]+'</li>';
+  }
+  ol.innerHTML = list;
+};
+
 
 
 
