@@ -72,30 +72,30 @@ request.send(null);
 //   ol.innerHTML = list;
 // };
 
-// var submit = document.getElementById("sub");
-// var ol = document.getElementById("list");
-// submit.onclick = function(){
-// var request = new XMLHttpRequest();
+var submit = document.getElementById("sub");
+var ol = document.getElementById("list");
+submit.onclick = function(){
+var request = new XMLHttpRequest();
 
-// request.onreadystatechange = function() {
-//     if (request.readyState ===  XMLHttpRequest.DONE) {
-//         if( request.status === 200)
-//         {
-//              var list ='';
-//               var names = request.responseText;
-//               names = JSON.parse(names);
-//               for(var i=0;i<names.length;i++)
-//               {
-//                   list+='<li>'+names[i]+'</li>';
-//               }
-//               ol.innerHTML = list;
-//         }
-//     }
-// };
-// var name = document.getElementById("t").value;
-// request.open('GET','http://muthukannanksv.imad.hasura-app.io/submitform?name='+ name ,true);
-// request.send(null);
-// };
+request.onreadystatechange = function() {
+    if (request.readyState ===  XMLHttpRequest.DONE) {
+        if( request.status === 200)
+        {
+             var list ='';
+              var names = request.responseText;
+              names = JSON.parse(names);
+              for(var i=0;i<names.length;i++)
+              {
+                  list+='<li>'+names[i]+'</li>';
+              }
+              ol.innerHTML = list;
+        }
+    }
+};
+var name = document.getElementById("t").value;
+request.open('GET','http://muthukannanksv.imad.hasura-app.io/submitform?name='+ name ,true);
+request.send(null);
+};
 
 
 
