@@ -46,7 +46,8 @@ request.onreadystatechange = function() {
     if (request.readyState ==  XMLHttpRequest.DONE && this.status === 200) {
        // Typical action to be performed when the document is ready:
       var  counter =this.responseText;
-       document.getElementById("s").innerHTML = counter.toString();
+      var s = document.getElementById("s");
+      s.innerHTML = counter.toString();
     }
 };
 };
