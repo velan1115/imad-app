@@ -38,37 +38,64 @@ console.log('Loaded!');
 //     s.innerHTML = counter.toString();
 // }
 
-var b = document.getElementById("b");
-b.onclick = function(){
+
+
+
+// var b = document.getElementById("b");
+// b.onclick = function(){
+// var request = new XMLHttpRequest();
+
+// request.onreadystatechange = function() {
+//     if (request.readyState ===  XMLHttpRequest.DONE) {
+//         if( request.status === 200)
+//         {
+//               // Typical action to be performed when the document is ready:
+//               var  counter =request.responseText;
+//               var s = document.getElementById("s");
+//               s.innerHTML = counter.toString(); 
+//         }
+//     }
+// };
+// request.open('GET','http://muthukannanksv.imad.hasura-app.io/counter',true);
+// request.send(null);
+// };
+
+// var submit = document.getElementById("sub");
+// var ol = document.getElementById("list");
+// submit.onclick = function(){
+//   var list ='';
+//   var names = ['mk','kan','vis','raja'];
+//   for(var i=0;i<names.length;i++)
+//   {
+//       list+='<li>'+names[i]+'</li>';
+//   }
+//   ol.innerHTML = list;
+// };
+
+var submit = document.getElementById("sub");
+var ol = document.getElementById("list");
+submit.onclick = function(){
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
     if (request.readyState ===  XMLHttpRequest.DONE) {
         if( request.status === 200)
         {
-              // Typical action to be performed when the document is ready:
-              var  counter =request.responseText;
-              var s = document.getElementById("s");
-              s.innerHTML = counter.toString(); 
+             var list ='';
+              var names = request.responseText;
+              names = JSON.parse(names);
+              for(var i=0;i<names.length;i++)
+              {
+                  list+='<li>'+names[i]+'</li>';
+              }
+              ol.innerHTML = list;
         }
     }
 };
-request.open('GET','http://muthukannanksv.imad.hasura-app.io/counter',true);
+var name = document.getElementById("t").value;
+request.open('GET','http://muthukannanksv.imad.hasura-app.io/submitform?name='+ name ,true);
 request.send(null);
 };
-
-var submit = document.getElementById("sub");
-var ol = document.getElementById("list");
-submit.onclick = function(){
-  var list ='';
-  var names = ['mk','kan','vis','raja'];
-  for(var i=0;i<names.length;i++)
-  {
-      list+='<li>'+names[i]+'</li>';
-  }
-  ol.innerHTML = list;
-};
-
 
 
 
