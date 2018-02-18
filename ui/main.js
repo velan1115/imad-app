@@ -38,16 +38,21 @@ console.log('Loaded!');
 //     s.innerHTML = counter.toString();
 // }
 
-
+var b = document.getElementById("b");
+b.onclick = function(){
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
     if (request.readyState ==  XMLHttpRequest.DONE && this.status == 200) {
        // Typical action to be performed when the document is ready:
-       document.getElementById("s").innerHTML = xhttp.responseText;
+      var  counter =this.responseText;
+       document.getElementById("s").innerHTML = counter.toString();
     }
 };
+};
 
+request.open('GET','http://muthukannanksv.imad.hasura-app.io/counter',true);
+request.send(null);
 
 
 
