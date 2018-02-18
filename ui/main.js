@@ -30,10 +30,35 @@ console.log('Loaded!');
 //     image.style.marginLeft = marginmove +'px';
 // }
 
-var counter = 0;
-var b = document.getElementById("b");
-var s = document.getElementById("s");
-b.onclick = function(){
-    counter = counter + 1;
-    s.innerHTML = counter.toString();
-}
+// var counter = 0;
+// var b = document.getElementById("b");
+// var s = document.getElementById("s");
+// b.onclick = function(){
+//     counter = counter + 1;
+//     s.innerHTML = counter.toString();
+// }
+
+
+var request = new XMLHttpRequest();
+
+request.onreadystatechange = function() {
+    if (request.readyState ==  XMLHttpRequest.DONE && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("s").innerHTML = xhttp.responseText;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
