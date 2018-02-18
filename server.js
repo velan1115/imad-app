@@ -112,9 +112,9 @@ app.get('/counter',function(req,res){
 var names=[];
 app.get('/submitform',function(req,res){
     //URL -->  /submitform/name = xxxx; (extract these name by query)
-     var name = req.query.name;
     //get the name from request
     //var name = req.params.name;
+     var name = req.query.name;
     names.push(name);
    // JSON javascript object notation
     res.send(JSON.stringify(names));
