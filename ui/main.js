@@ -41,9 +41,9 @@ console.log('Loaded!');
 
 
 
-// var b = document.getElementById("b");
-// b.onclick = function(){
-// var request = new XMLHttpRequest();
+var b = document.getElementById("b");
+b.onclick = function(){
+var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
     if (request.readyState ===  XMLHttpRequest.DONE) {
