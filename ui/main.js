@@ -53,10 +53,11 @@ request.onreadystatechange = function() {
         }
     }
 };
-};
-
 request.open('GET','http://muthukannanksv.imad.hasura-app.io/counter',true);
 request.send(null);
+};
+
+
 
 
 
